@@ -31,12 +31,12 @@ themeToggle?.addEventListener("click", () => {
 });
 
 const playlists = [
-  { id: 1, title: "Deep Focus Flow", artist: "Sonder Radio", cover: "./assets/album1.jpg", category: "study", mood: "calm", minutes: 45, rating: 4.9, tags: ["instrumental", "lofi", "calm"], description: "Instrumental focus music for coding, notes and long study blocks." },
-  { id: 2, title: "Exam Sprint Beats", artist: "Sonder Beats", cover: "./assets/album2.jpg", category: "study", mood: "energetic", minutes: 30, rating: 4.7, tags: ["beats", "fast", "revision"], description: "Faster beats for quick revision sessions and deadline energy." },
-  { id: 3, title: "Gym Hype Mode", artist: "Pulse Club", cover: "./assets/album3.jpg", category: "workout", mood: "high", minutes: 50, rating: 4.8, tags: ["pop", "power", "cardio"], description: "High energy tracks for workouts, walks and confidence boosts." },
-  { id: 4, title: "Soft Reset", artist: "Luna Grey", cover: "./assets/album4.jpg", category: "relax", mood: "peaceful", minutes: 38, rating: 4.6, tags: ["soft", "acoustic", "night"], description: "Calmer music for relaxing after classes or before sleep." },
-  { id: 5, title: "Metro Window Seat", artist: "Nova Lane", cover: "./assets/album5.jpg", category: "travel", mood: "dreamy", minutes: 42, rating: 4.5, tags: ["indie", "travel", "dreamy"], description: "Indie travel vibes for bus rides and main-character walks." },
-  { id: 6, title: "Clean Room Reset", artist: "Mira Sol", cover: "./assets/album6.jpg", category: "relax", mood: "fresh", minutes: 28, rating: 4.4, tags: ["fresh", "pop", "chill"], description: "Light music for cleaning your room and resetting your mood." }
+  { id: 1, title: "Deep Focus Flow", artist: "Sonder Radio", cover: "assets/album1.jpg", category: "study", mood: "calm", minutes: 45, rating: 4.9, tags: ["instrumental", "lofi", "calm"], description: "Instrumental focus music for coding, notes and long study blocks." },
+  { id: 2, title: "Exam Sprint Beats", artist: "Sonder Beats", cover: "assets/album2.jpg", category: "study", mood: "energetic", minutes: 30, rating: 4.7, tags: ["beats", "fast", "revision"], description: "Faster beats for quick revision sessions and deadline energy." },
+  { id: 3, title: "Gym Hype Mode", artist: "Pulse Club", cover: "assets/album3.jpg", category: "workout", mood: "high", minutes: 50, rating: 4.8, tags: ["pop", "power", "cardio"], description: "High energy tracks for workouts, walks and confidence boosts." },
+  { id: 4, title: "Soft Reset", artist: "Luna Grey", cover: "assets/album4.jpg", category: "relax", mood: "peaceful", minutes: 38, rating: 4.6, tags: ["soft", "acoustic", "night"], description: "Calmer music for relaxing after classes or before sleep." },
+  { id: 5, title: "Metro Window Seat", artist: "Nova Lane", cover: "assets/album5.jpg", category: "travel", mood: "dreamy", minutes: 42, rating: 4.5, tags: ["indie", "travel", "dreamy"], description: "Indie travel vibes for bus rides and main-character walks." },
+  { id: 6, title: "Clean Room Reset", artist: "Mira Sol", cover: "assets/album6.jpg", category: "relax", mood: "fresh", minutes: 28, rating: 4.4, tags: ["fresh", "pop", "chill"], description: "Light music for cleaning your room and resetting your mood." }
 ];
 
 const tips = [
