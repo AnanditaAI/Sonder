@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script>if(!localStorage.getItem("sonderUser")) window.location.href="./login.html";</script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sonder — Music Mood Player</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Jockey+One&family=Kalnia:wght@300;400;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#home">Sonder</a>
+  <nav class="nav__links">
+    <a href="#mood">Mood Match</a><a href="#playlists">Playlists</a><a href="#problem">Our Sound</a><a href="#bom">Behind the Music</a>
+  </nav>
+  <div class="nav__right"><button class="nav__cta" id="themeToggle" type="button">Dark Mode</button>
+      <button class="nav__cta" id="openHelp" type="button">How it works</button><div class="user-chip"><span id="welcomeUser">Welcome</span><button id="logoutBtn" type="button">Logout</button></div></div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero__copy">
+    <p class="pill">Music player • Mood finder • Focus timer</p>
+    <h1>Your mood.<br>Your music.</h1>
+    <p class="hero__sub">Sonder is a music discovery website that recommends playlists based on your mood and activity. It also helps students choose music faster and stay focused during study sessions.</p>
+    <div class="hero__actions"><a class="btn btn--primary" href="#playlists">Explore Playlists</a><a class="btn btn--ghost" href="#mood">Find My Vibe</a></div>
+    <div class="stats" id="statsArea"></div>
+  </div>
+  <div class="album-stack">
+    <div class="album-card album-card--back"><span>LOFI</span></div><div class="album-card album-card--middle"><span>INDIE</span></div><div class="album-card album-card--front"><div class="vinyl-mini"></div><span>SONDER<br>RADIO</span></div>
+  </div>
+</section>
+<section class="mood" id="mood">
+  <div class="section-head"><p class="pill">Mood based recommendation</p><h2>Find your vibe</h2><p>Choose your activity and energy level. JavaScript recommends a playlist for you.</p></div>
+  <form class="quiz" id="moodForm">
+    <label>What are you doing?<select id="activity" required><option value="">Select activity</option><option value="study">Studying</option><option value="workout">Working out</option><option value="relax">Relaxing</option><option value="travel">Travelling</option></select></label>
+    <label>Your energy level<input id="energy" type="range" min="1" max="10" value="5"><span id="energyValue">5</span>/10</label>
+    <label>Search a vibe<input id="keyword" type="text" placeholder="Example: calm, indie, beats"></label>
+    <button class="btn btn--primary" type="submit">Recommend</button><p class="form-error" id="formError"></p>
+  </form>
+  <div class="recommendation" id="recommendation"><p class="muted">Your recommendation will appear here.</p></div>
+</section>
+<section class="playlists" id="playlists">
+  <div class="section-head section-head--row"><div><p class="pill">Playlist library</p><h2>Browse by mood</h2><p>Click any playlist to open a full music dashboard in a new window.</p></div>
+  <div class="filters" id="filterBar"><button class="chip active" data-filter="all" type="button">All</button><button class="chip" data-filter="study" type="button">Study</button><button class="chip" data-filter="workout" type="button">Workout</button><button class="chip" data-filter="relax" type="button">Relax</button><button class="chip" data-filter="travel" type="button">Travel</button></div></div>
+  <div class="tools"><input id="searchBox" type="search" placeholder="Search playlist, mood, or genre"><select id="sortSelect"><option value="rating">Sort by rating</option><option value="minutes">Sort by duration</option><option value="title">Sort by title</option></select></div>
+  <div class="playlist-grid" id="playlistGrid"></div><p class="library-total" id="libraryTotal"></p>
+</section>
+<section class="problem" id="problem"><div class="section-head"><p class="pill">Why Sonder exists</p><h2>Made for every mood</h2></div><div class="problem-grid"><article class="info-card"><h3>Music discovery</h3><p>Users can explore playlists by mood, genre, activity and rating instead of randomly scrolling.</p></article><article class="info-card"><h3>Student focus</h3><p>It helps students select suitable background music quickly and start a focused session.</p></article><article class="info-card"><h3>Personalized experience</h3><p>The user logs in, gets greeted by name, adds tasks and saves them in browser storage.</p></article></div></section>
+<section class="insights" id="bom"><div class="section-head"><p class="pill">Behind the Music</p><h2>Your listening space</h2></div><div class="insight-grid"><article class="info-card"><h3>Your device vibe</h3><p id="browserInfo">Loading your listening setup...</p><p id="pageInfo"></p></article><article class="info-card"><h3>Daily music tip</h3><p id="dailyTip">Loading tip with Promise...</p><button class="btn btn--ghost" id="newTip" type="button">New tip</button></article></div></section>
+</main>
+<footer class="footer"><p>Sonder • Music Mood Player • Built with HTML, CSS and JavaScript</p></footer>
+<template id="playlistTemplate"><article class="playlist-card"><div class="cover-art"><div class="card-disc"></div></div><div class="playlist-card__body"><div class="playlist-card__top"><h3 class="card-title"></h3><span class="rating"></span></div><p class="card-desc"></p><div class="tags"></div><button class="play-btn" type="button">Open playlist</button></div></article></template>
+<script src="./script.js"></script>
+</body></html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login — Sonder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Jockey+One&family=Kalnia:wght@300;400;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="login-body">
+  <main class="login-shell">
+    <section class="login-left">
+      <div>
+        <div class="login-logo">Sonder</div>
+        <h1>Enter your music space.</h1>
+        <p>Create a simple profile so the website can greet you by name and personalize your music experience.</p>
+        <div class="login-points">
+          <div class="login-point">Mood based music discovery</div>
+          <div class="login-point">Playlist dashboard pages</div>
+          <div class="login-point">Focus mode for study sessions</div>
+        </div>
+      </div>
+    </section>
+    <section class="login-card">
+      <h2>Create your profile</h2>
+      <p>Enter your details to continue to the music website.</p>
+      <form class="login-form" id="loginForm" novalidate>
+        <label>Full Name<input type="text" id="name" placeholder="Enter your name" autocomplete="name"></label>
+        <label>Email<input type="email" id="email" placeholder="example@gmail.com" autocomplete="email"></label>
+        <label class="password-row">Password<input type="password" id="password" placeholder="Minimum 6 characters" autocomplete="new-password"><button class="show-pass" id="showPass" type="button">Show</button></label>
+        <label>Contact Number<input type="tel" id="contact" placeholder="10 digit mobile number" autocomplete="tel"></label>
+        <p class="login-error" id="loginError"></p>
+        <button class="btn btn--primary" type="submit">Continue to website</button>
+      </form>
+      <p class="login-note">This is a frontend demo. Details are stored only in browser localStorage.</p>
+    </section>
+  </main>
+<script>
+const loginForm=document.querySelector("#loginForm"),nameInput=document.querySelector("#name"),emailInput=document.querySelector("#email"),passwordInput=document.querySelector("#password"),contactInput=document.querySelector("#contact"),loginError=document.querySelector("#loginError"),showPass=document.querySelector("#showPass");
+if(JSON.parse(localStorage.getItem("sonderUser")||"null")) window.location.href="./index.html";
+showPass.addEventListener("click",()=>{const p=passwordInput.type==="password";passwordInput.type=p?"text":"password";showPass.textContent=p?"Hide":"Show";});
+loginForm.addEventListener("submit",(event)=>{event.preventDefault();const name=nameInput.value.trim(),email=emailInput.value.trim(),password=passwordInput.value.trim(),contact=contactInput.value.trim();const emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/,contactPattern=/^[0-9]{10}$/,passwordPattern=/^(?=.*[A-Za-z])(?=.*\d).{6,}$/;loginError.textContent="";
+if(name.length<2){loginError.textContent="Please enter a valid name.";nameInput.focus();return;}
+if(!emailPattern.test(email)){loginError.textContent="Please enter a valid email address.";emailInput.focus();return;}
+if(!passwordPattern.test(password)){loginError.textContent="Password must be at least 6 characters and include one letter and one number.";passwordInput.focus();return;}
+if(!contactPattern.test(contact)){loginError.textContent="Contact number must be exactly 10 digits.";contactInput.focus();return;}
+localStorage.setItem("sonderUser",JSON.stringify({name,email,contact,loginTime:new Date().toLocaleString()}));alert("Login successful. Welcome "+name+"!");window.location.href="./index.html";});
+</script>
+</body></html>

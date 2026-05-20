@@ -1,0 +1,400 @@
+:root{--bg:#efe1db;--ink:#111;--muted:rgba(0,0,0,.64);--line:rgba(0,0,0,.13);--blue:#1f8ec3;--card:rgba(255,255,255,.46);--shadow:0 20px 45px rgba(0,0,0,.12);--radius:28px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 12% 8%,rgba(31,142,195,.2),transparent 25%),radial-gradient(circle at 88% 8%,rgba(211,106,20,.16),transparent 22%),linear-gradient(135deg,#efe1db 0%,#fff8ef 52%,#f3d6c4 100%);color:var(--ink);font-family:"Kalnia",serif;overflow-x:hidden}button,input,select{font:inherit}button{cursor:pointer}.nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 34px;background:rgba(239,225,219,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.brand{text-decoration:none;color:var(--ink);font-family:"Jockey One",sans-serif;font-size:34px;white-space:nowrap}.nav__links{flex:1;display:flex;gap:18px;flex-wrap:wrap;justify-content:center}.nav__links a{text-decoration:none;color:var(--ink);font-family:"Jockey One",sans-serif;font-size:16px}.nav__links a:hover{color:var(--blue)}.nav__right{margin-left:auto;display:flex;align-items:center;gap:12px}.nav__cta,.round-btn,.chip{border:1px solid var(--line);background:rgba(255,255,255,.45);border-radius:999px;padding:10px 14px;font-family:"Jockey One",sans-serif;font-size:16px}.user-chip{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;padding:7px 10px 7px 12px;background:rgba(255,255,255,.44);font-family:"Jockey One",sans-serif;font-size:15px;white-space:nowrap}.user-chip button{border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:var(--ink);color:white;font-family:"Jockey One",sans-serif;font-size:14px}.hero,.problem,.mood,.playlists,.planner,.insights{max-width:1450px;margin:0 auto;padding:42px 48px}.hero{min-height:82vh;display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:34px}.pill{display:inline-block;margin:0 0 14px;border:1px solid var(--line);border-radius:999px;padding:7px 12px;background:rgba(255,255,255,.38);font-family:"Jockey One",sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase}.hero h1{margin:0 0 14px;font-family:"Unbounded",sans-serif;font-size:clamp(42px,5vw,82px);line-height:.98;text-transform:uppercase;color:var(--blue);text-shadow:-5px 7px rgba(0,0,0,.15)}.hero__sub{max-width:620px;margin:0;font-size:18px;line-height:1.38;color:var(--muted)}.hero__actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}.btn{display:inline-flex;justify-content:center;align-items:center;text-decoration:none;border-radius:999px;padding:12px 18px;border:1px solid var(--line);font-family:"Jockey One",sans-serif;font-size:17px}.btn--primary{background:var(--ink);color:white}.btn--ghost{background:rgba(255,255,255,.48);color:var(--ink)}.stats{display:grid;grid-template-columns:repeat(3,minmax(120px,1fr));gap:10px;margin-top:28px}.stat{padding:16px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.32)}.stat strong{display:block;font-family:"Unbounded",sans-serif;font-size:20px}.stat span{font-family:"Jockey One",sans-serif;font-size:12px;color:var(--muted);text-transform:uppercase}.album-stack{min-height:470px;position:relative;display:grid;place-items:center}.album-card{position:absolute;width:min(360px,70vw);aspect-ratio:1;border:1px solid rgba(255,255,255,.36);border-radius:36px;box-shadow:0 26px 50px rgba(0,0,0,.25);display:grid;place-items:center;color:white;font-family:"Unbounded",sans-serif;font-size:34px;text-align:center;overflow:hidden}.album-card--back{transform:rotate(-15deg) translate(-70px,20px);background:linear-gradient(135deg,#10131c,#1f8ec3)}.album-card--middle{transform:rotate(12deg) translate(70px,-18px);background:linear-gradient(135deg,#7f0f12,#d36a14)}.album-card--front{z-index:3;background:linear-gradient(135deg,#111,#414141)}.vinyl-mini{width:58%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#d6ff3f 0 13%,#111 14% 21%,transparent 22%),repeating-radial-gradient(circle,#151515 0 8px,#050505 9px 13px);animation:spin 4s linear infinite}.album-card--front span{position:absolute;bottom:28px;font-size:26px}@keyframes spin{to{transform:rotate(360deg)}}.section-head{margin-bottom:26px}.section-head h2{margin:0 0 10px;font-family:"Unbounded",sans-serif;font-size:clamp(26px,3vw,38px)}.section-head p{max-width:760px;color:var(--muted);font-size:16px}.section-head--row{display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap}.problem-grid,.insight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.info-card,.recommendation,.quiz,.timer-card,.task-form,.json-box{border:1px solid var(--line);border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow)}.info-card{padding:24px}.info-card h3{margin:0 0 10px;font-family:"Unbounded",sans-serif;font-size:19px}.info-card p{color:var(--muted);font-size:16px;line-height:1.5}.quiz{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:24px}.quiz label,.task-form{font-family:"Jockey One",sans-serif;font-size:16px}.quiz input,.quiz select,.task-form input,.tools input,.tools select{width:100%;margin-top:8px;padding:13px 15px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.68)}.quiz button{align-self:end}.form-error{margin:0;color:#9e1b1b;font-family:"Jockey One",sans-serif}.recommendation{margin-top:22px;padding:24px;min-height:120px}.recommendation h3{margin:0 0 8px;font-family:"Unbounded",sans-serif;font-size:28px}.muted{color:var(--muted)}.filters,.tools{display:flex;gap:12px;flex-wrap:wrap}.chip.active{background:var(--ink);color:white}.tools{margin-bottom:22px}.tools input{flex:1;min-width:260px}.playlist-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.playlist-card{border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.42);overflow:hidden;box-shadow:var(--shadow);transition:.25s;cursor:pointer}.playlist-card:hover{transform:translateY(-7px);box-shadow:0 24px 44px rgba(0,0,0,.16)}.cover-art{min-height:155px;display:grid;place-items:center;background:linear-gradient(135deg,#1f8ec3,#10131c)}.card-disc{width:92px;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#d6ff3f 0 12%,#111 13% 20%,transparent 21%),repeating-radial-gradient(circle,#151515 0 6px,#080808 7px 10px)}.playlist-card__body{padding:16px}.playlist-card__top{display:flex;justify-content:space-between;gap:12px;align-items:start}.card-title{margin:0;font-family:"Unbounded",sans-serif;font-size:19px}.rating{font-family:"Jockey One",sans-serif;white-space:nowrap}.card-desc{min-height:54px;color:var(--muted);font-size:16px}.tags{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.tag{border-radius:999px;padding:7px 10px;background:rgba(0,0,0,.08);font-family:"Jockey One",sans-serif;font-size:14px}.play-btn{width:100%;padding:13px;border:1px solid var(--line);border-radius:999px;background:var(--ink);color:white;font-family:"Jockey One",sans-serif;font-size:18px}.timer-card{width:min(440px,100%);display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px;margin-bottom:18px}.timer-card h3{margin:4px 0;font-family:"Unbounded",sans-serif;font-size:20px}.task-form{display:grid;grid-template-columns:1fr 150px auto;gap:12px;padding:18px;margin-bottom:18px}.task-list{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:12px}.task-item{display:flex;justify-content:space-between;align-items:center;gap:16px;border:1px solid var(--line);border-radius:20px;padding:16px;background:rgba(255,255,255,.36)}.task-item.done .task-name{text-decoration:line-through;color:var(--muted)}.task-name{font-family:"Jockey One",sans-serif;font-size:20px}.task-actions{display:flex;gap:8px}.task-actions button{border:1px solid var(--line);border-radius:999px;padding:8px 11px;background:rgba(255,255,255,.55)}.json-box{margin-top:18px;padding:18px;min-height:130px;white-space:pre-wrap;overflow:auto}.footer{text-align:center;padding:28px;color:var(--muted);font-family:"Jockey One",sans-serif}.login-body{min-height:100vh;display:grid;place-items:center;padding:24px}.login-shell{width:min(1100px,100%);display:grid;grid-template-columns:.95fr 1.05fr;border:1px solid var(--line);border-radius:36px;overflow:hidden;background:rgba(255,255,255,.42);box-shadow:0 28px 70px rgba(0,0,0,.18)}.login-left{padding:48px;background:linear-gradient(135deg,#10131c,#1f8ec3);color:white;min-height:620px}.login-left h1{margin:12px 0 18px;font-family:"Unbounded",sans-serif;font-size:clamp(42px,5vw,72px);line-height:.95;text-transform:uppercase}.login-left p{font-size:21px;line-height:1.5;color:rgba(255,255,255,.82)}.login-logo{font-family:"Jockey One",sans-serif;font-size:42px}.login-points{display:grid;gap:12px;margin-top:26px}.login-point{border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:14px;background:rgba(255,255,255,.1);font-family:"Jockey One",sans-serif;font-size:19px}.login-card{padding:48px;display:flex;flex-direction:column;justify-content:center}.login-card h2{margin:0 0 8px;font-family:"Unbounded",sans-serif;font-size:36px}.login-card>p{margin:0 0 24px;color:var(--muted);font-size:16px}.login-form{display:grid;gap:16px}.login-form label{font-family:"Jockey One",sans-serif;font-size:18px}.login-form input{width:100%;margin-top:7px;padding:14px 15px;border:1px solid var(--line);border-radius:17px;background:rgba(255,255,255,.72);outline:none}.password-row{position:relative}.show-pass{position:absolute;right:10px;bottom:9px;border:1px solid var(--line);border-radius:999px;padding:6px 10px;background:rgba(255,255,255,.75);font-family:"Jockey One",sans-serif}.login-error{min-height:22px;margin:0;color:#9e1b1b;font-family:"Jockey One",sans-serif}.login-note{margin-top:16px;color:var(--muted);font-size:15px}.playlist-page-body{min-height:100vh;padding:30px;background:radial-gradient(circle at 10% 20%,rgba(119,46,255,.55),transparent 25%),radial-gradient(circle at 90% 20%,rgba(31,142,195,.38),transparent 28%),linear-gradient(135deg,#19052e,#3a0a6e,#10131c);color:white}.playlist-app{width:min(1320px,100%);min-height:850px;margin:0 auto;display:grid;grid-template-columns:250px 1fr 310px;overflow:hidden;border:1px solid rgba(255,255,255,.12);border-radius:36px;background:rgba(20,13,45,.68);backdrop-filter:blur(20px);box-shadow:0 30px 80px rgba(0,0,0,.42)}.playlist-sidebar{padding:28px;background:rgba(0,0,0,.24);border-right:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:24px}.side-logo{margin:0;font-family:"Jockey One",sans-serif;font-size:40px}.side-search{width:100%;border:none;outline:none;padding:13px 14px;border-radius:14px;background:rgba(255,255,255,.09);color:white}.side-menu{display:grid;gap:14px}.side-menu a{text-decoration:none;color:rgba(255,255,255,.72);font-family:"Jockey One",sans-serif;font-size:18px;padding:11px 12px;border-radius:14px}.side-menu a:hover{color:white;background:rgba(255,255,255,.09)}.side-user{margin-top:auto;display:flex;align-items:center;gap:12px}.avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#1f8ec3,#d6ff3f);color:#111;font-family:"Jockey One",sans-serif;font-size:22px}.side-user p{margin:0;font-family:"Jockey One",sans-serif}.side-user span{color:rgba(255,255,255,.55);font-size:14px}.playlist-main{padding:26px 32px;overflow:hidden}.playlist-topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.back-home,.playlist-user-chip{text-decoration:none;color:white;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.08);border-radius:999px;padding:10px 14px;font-family:"Jockey One",sans-serif}.featured-banner{min-height:250px;display:grid;grid-template-columns:1.25fr .75fr;gap:20px;padding:30px;border-radius:30px;background:linear-gradient(90deg,rgba(0,0,0,.65),rgba(0,0,0,.08)),linear-gradient(135deg,#1f8ec3,#10131c);overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.24)}.small-label{margin:0 0 10px;color:rgba(255,255,255,.62);font-family:"Jockey One",sans-serif;letter-spacing:.08em;text-transform:uppercase}.featured-banner h2{margin:0;max-width:500px;font-family:"Unbounded",sans-serif;font-size:42px;line-height:1.05}.featured-banner p{max-width:540px;color:rgba(255,255,255,.76);font-size:17px;line-height:1.45}.banner-actions{display:flex;gap:12px;margin-top:24px}.main-play-btn,.follow-btn{border:none;border-radius:999px;padding:13px 22px;font-family:"Jockey One",sans-serif;font-size:18px}.main-play-btn{background:#ff335f;color:white}.follow-btn{background:rgba(255,255,255,.1);color:white;border:1px solid rgba(255,255,255,.22)}.banner-art{border-radius:24px;display:grid;place-items:center;background:linear-gradient(135deg,#1f8ec3,#10131c)}.banner-disc{width:170px;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#d6ff3f 0 12%,#111 13% 20%,transparent 21%),repeating-radial-gradient(circle,#151515 0 7px,#060606 8px 12px);box-shadow:0 18px 30px rgba(0,0,0,.3);animation:spin 4s linear infinite}.track-section{margin-top:24px}.track-head{display:flex;justify-content:space-between;align-items:center}.track-head h3{margin:0;font-family:"Unbounded",sans-serif;font-size:34px}.track-head span{color:rgba(255,255,255,.55);font-family:"Jockey One",sans-serif}.track-table{margin-top:14px}.track-row{display:grid;grid-template-columns:55px 1.4fr 1fr 70px;align-items:center;gap:12px;padding:13px 16px;border-radius:14px;color:rgba(255,255,255,.72)}.track-row-heading{color:rgba(255,255,255,.38);font-family:"Jockey One",sans-serif;text-transform:uppercase;font-size:13px}.song-row{cursor:pointer;transition:.2s}.song-row:hover,.active-song{background:rgba(255,255,255,.12);color:white}.bottom-player{margin-top:26px;padding:18px;display:grid;grid-template-columns:260px 1fr;gap:22px;align-items:center;border-radius:26px;background:rgba(0,0,0,.30);border:1px solid rgba(255,255,255,.10)}.mini-current{display:flex;align-items:center;gap:14px}.mini-cover{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,#1f8ec3,#10131c)}.mini-current h4{margin:0;font-family:"Jockey One",sans-serif;font-size:21px}.mini-current p{margin:4px 0 0;color:rgba(255,255,255,.55)}.player-center{display:grid;gap:12px}.player-buttons{display:flex;justify-content:center;gap:12px}.player-buttons button{width:46px;height:46px;border-radius:50%;border:none;background:rgba(255,255,255,.12);color:white}#playSongBtn{background:white;color:#111}.song-progress{display:grid;grid-template-columns:40px 1fr 40px;align-items:center;gap:10px;color:rgba(255,255,255,.62);font-family:"Jockey One",sans-serif}.song-progress input{width:100%}.playlist-right{padding:28px;background:rgba(0,0,0,.20);border-left:1px solid rgba(255,255,255,.08)}.playlist-right h3{margin:0 0 16px;font-family:"Unbounded",sans-serif;font-size:22px}.tag-cloud{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}.tag-cloud span{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.10);font-family:"Jockey One",sans-serif}.recent-list{display:grid;gap:14px}.recent-song{display:flex;align-items:center;gap:12px}.recent-thumb{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#1f8ec3,#d6ff3f)}.recent-song h4{margin:0;font-family:"Jockey One",sans-serif;font-size:17px}.recent-song p{margin:3px 0 0;color:rgba(255,255,255,.50);font-size:14px}.album-preview{margin-top:34px;padding:16px;border-radius:24px;background:rgba(255,255,255,.08)}.album-preview-art{height:190px;border-radius:20px;background:linear-gradient(135deg,#1f8ec3,#10131c);margin-bottom:14px}.album-preview h4{margin:0;font-family:"Jockey One",sans-serif;font-size:22px}.album-preview p{margin:4px 0 14px;color:rgba(255,255,255,.55)}.album-preview button{width:42px;height:42px;border-radius:50%;border:none;background:rgba(255,255,255,.14);color:white;font-size:24px}@media(max-width:1100px){.nav{flex-wrap:wrap;justify-content:center}.nav__links{order:3;width:100%;justify-content:center}.nav__right{margin-left:0}.hero{grid-template-columns:1fr}.album-stack{order:-1;min-height:410px}.problem-grid,.playlist-grid,.insight-grid{grid-template-columns:1fr 1fr}.quiz{grid-template-columns:1fr}.playlist-app{grid-template-columns:1fr}.playlist-sidebar,.playlist-right{display:none}.playlist-page-body{padding:16px}}@media(max-width:880px){.login-shell{grid-template-columns:1fr}.login-left{min-height:auto}}@media(max-width:700px){.playlist-main{padding:18px}.featured-banner,.bottom-player{grid-template-columns:1fr}.featured-banner h2{font-size:32px}.track-row{grid-template-columns:35px 1fr 70px}.track-row span:nth-child(3){display:none}.bottom-player{gap:16px}}@media(max-width:680px){.nav{padding:14px 16px}.brand{font-size:28px}.nav__right{width:100%;justify-content:center;flex-wrap:wrap}.hero,.problem,.mood,.playlists,.planner,.insights{padding:42px 18px}.hero h1{font-size:clamp(34px,11vw,52px)}.hero__sub{font-size:16px}.album-stack{min-height:340px}.album-card{width:min(250px,78vw);border-radius:28px}.album-card--back{transform:rotate(-12deg) translate(-36px,18px)}.album-card--middle{transform:rotate(10deg) translate(36px,-12px)}.problem-grid,.playlist-grid,.insight-grid,.stats,.task-form{grid-template-columns:1fr}.timer-card,.task-item{flex-direction:column;align-items:stretch}.login-left,.login-card{padding:28px}}
+/* Playlist window font override only */
+.playlist-page-body,
+.playlist-page-body button,
+.playlist-page-body input,
+.playlist-page-body select{
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+.playlist-page-body h1,
+.playlist-page-body h2,
+.playlist-page-body h3,
+.playlist-page-body h4,
+.playlist-page-body .side-logo,
+.playlist-page-body .small-label,
+.playlist-page-body .side-menu a,
+.playlist-page-body .back-home,
+.playlist-page-body .playlist-user-chip,
+.playlist-page-body .main-play-btn,
+.playlist-page-body .follow-btn,
+.playlist-page-body .tag-cloud span,
+.playlist-page-body .track-row-heading{
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+}
+
+
+
+
+/* Source Sans 3 for all paragraphs and paragraph-like text only, not headings */
+p,
+.hero__sub,
+.info-card p,
+.section-head p,
+.card-desc,
+.recommendation p,
+.login-left p,
+.login-card > p,
+.login-note,
+.playlist-page-body p,
+.featured-banner p,
+.mini-current p,
+.recent-song p,
+.album-preview p,
+.side-user span,
+.library-total,
+.muted{
+  font-family: "Source Sans 3", sans-serif;
+}
+
+
+/* Navbar spacing and size update */
+.nav__links{
+  gap: 32px;
+}
+
+.nav__links a{
+  font-size: 19px;
+  letter-spacing: .02em;
+}
+
+
+/* Feature update: dark/light theme, album images, liked songs */
+body.dark-theme{
+  --bg:#10131c;
+  --ink:#ffffff;
+  --muted:rgba(255,255,255,.70);
+  --line:rgba(255,255,255,.16);
+  --card:rgba(255,255,255,.08);
+  background:
+    radial-gradient(circle at 12% 8%, rgba(31,142,195,.22), transparent 25%),
+    radial-gradient(circle at 88% 8%, rgba(211,106,20,.18), transparent 22%),
+    linear-gradient(135deg, #10131c 0%, #171d29 52%, #25112d 100%);
+}
+
+body.dark-theme .nav{
+  background:rgba(16,19,28,.86);
+}
+
+body.dark-theme .btn--ghost,
+body.dark-theme .nav__cta,
+body.dark-theme .chip,
+body.dark-theme .user-chip,
+body.dark-theme .quiz input,
+body.dark-theme .quiz select,
+body.dark-theme .task-form input,
+body.dark-theme .tools input,
+body.dark-theme .tools select{
+  background:rgba(255,255,255,.10);
+  color:white;
+}
+
+body.dark-theme .btn--primary,
+body.dark-theme .play-btn,
+body.dark-theme .user-chip button{
+  background:white;
+  color:#111;
+}
+
+body.dark-theme .playlist-card,
+body.dark-theme .info-card,
+body.dark-theme .recommendation,
+body.dark-theme .quiz,
+body.dark-theme .timer-card,
+body.dark-theme .task-form,
+body.dark-theme .json-box,
+body.dark-theme .stat{
+  background:rgba(255,255,255,.08);
+}
+
+.cover-art{
+  overflow:hidden;
+}
+
+.cover-img{
+  width:100%;
+  height:100%;
+  min-height:155px;
+  object-fit:cover;
+  display:block;
+}
+
+.card-disc{
+  display:none;
+}
+
+.like-song{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(255,255,255,.10);
+  color:white;
+  font-size:17px;
+}
+
+.like-song.liked{
+  background:#ff335f;
+  color:white;
+  border-color:#ff335f;
+}
+
+.liked-list{
+  display:grid;
+  gap:12px;
+  margin-bottom:28px;
+}
+
+.liked-song-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:10px;
+  border-radius:16px;
+  background:rgba(255,255,255,.08);
+}
+
+.liked-song-item h4{
+  margin:0;
+  font-family:"Poppins", "Segoe UI", Arial, sans-serif;
+  font-size:16px;
+}
+
+.liked-song-item p{
+  margin:3px 0 0;
+  color:rgba(255,255,255,.55);
+  font-size:13px;
+}
+
+.empty-liked{
+  color:rgba(255,255,255,.55);
+  line-height:1.4;
+}
+
+.playlist-page-body.light-playlist{
+  background:
+    radial-gradient(circle at 10% 20%, rgba(31,142,195,.28), transparent 25%),
+    radial-gradient(circle at 90% 20%, rgba(211,106,20,.25), transparent 28%),
+    linear-gradient(135deg, #efe1db, #fff8ef);
+}
+
+.light-playlist .playlist-app{
+  background:rgba(255,255,255,.70);
+  color:#111;
+}
+
+.light-playlist .playlist-sidebar,
+.light-playlist .playlist-right{
+  background:rgba(255,255,255,.35);
+  border-color:rgba(0,0,0,.10);
+}
+
+.light-playlist .side-menu a,
+.light-playlist .featured-banner p,
+.light-playlist .track-row,
+.light-playlist .mini-current p,
+.light-playlist .recent-song p,
+.light-playlist .album-preview p,
+.light-playlist .side-user span,
+.light-playlist .small-label,
+.light-playlist .track-head span{
+  color:rgba(0,0,0,.62);
+}
+
+.light-playlist .back-home,
+.light-playlist .playlist-user-chip,
+.light-playlist .side-search,
+.light-playlist .tag-cloud span,
+.light-playlist .album-preview,
+.light-playlist .bottom-player,
+.light-playlist .player-buttons button,
+.light-playlist .liked-song-item{
+  background:rgba(0,0,0,.06);
+  color:#111;
+  border-color:rgba(0,0,0,.12);
+}
+
+.light-playlist .song-row:hover,
+.light-playlist .active-song{
+  background:rgba(0,0,0,.08);
+  color:#111;
+}
+
+.light-playlist #playSongBtn{
+  background:#111;
+  color:white;
+}
+
+
+.playlist-top-actions{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.playlist-cover-image{
+  width:100%;
+  height:100%;
+  min-height:220px;
+  object-fit:cover;
+  border-radius:22px;
+}
+
+.playlist-page-body .track-row{
+  grid-template-columns:55px 1.35fr .95fr 70px 54px;
+}
+
+@media (max-width:700px){
+  .playlist-page-body .track-row{
+    grid-template-columns:35px 1fr 70px 44px;
+  }
+
+  .playlist-page-body .track-row span:nth-child(3){
+    display:none;
+  }
+}
+
+/* Album cover image display */
+.cover-art{ overflow:hidden; }
+.cover-img{
+  width:100%;
+  height:100%;
+  min-height:155px;
+  object-fit:cover;
+  display:block;
+}
+.card-disc{ display:none; }
+.playlist-cover-image{
+  width:100%;
+  height:100%;
+  min-height:220px;
+  object-fit:cover;
+  border-radius:22px;
+}
+
+
+/* Photo album covers on playlist cards */
+.cover-art{
+  overflow:hidden;
+  min-height:190px;
+}
+
+.cover-img{
+  width:100%;
+  height:100%;
+  min-height:190px;
+  object-fit:cover;
+  display:block;
+}
+
+.card-disc{
+  display:none;
+}
+
+.playlist-cover-image{
+  width:100%;
+  height:100%;
+  min-height:220px;
+  object-fit:cover;
+  border-radius:22px;
+}
+
+
+/* FIXED photo album covers: force images to show in playlist cards */
+.playlist-card .cover-art{
+  overflow:hidden !important;
+  min-height:210px !important;
+  height:210px !important;
+  padding:0 !important;
+  display:block !important;
+  background:transparent !important;
+}
+
+.playlist-card .cover-img{
+  width:100% !important;
+  height:210px !important;
+  min-height:210px !important;
+  object-fit:cover !important;
+  display:block !important;
+}
+
+.playlist-card .card-disc{
+  display:none !important;
+}
+
+.playlist-cover-image{
+  width:100% !important;
+  height:100% !important;
+  min-height:220px !important;
+  object-fit:cover !important;
+  display:block !important;
+  border-radius:22px !important;
+}
+
+
+/* Two-card layout for the final insights section */
+.insights .insight-grid{
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+}
+
+@media (max-width:680px){
+  .insights .insight-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+
+/* Uploaded album cover photos */
+.playlist-card .cover-art{
+  overflow:hidden !important;
+  min-height:210px !important;
+  height:210px !important;
+  padding:0 !important;
+  display:block !important;
+  background:transparent !important;
+}
+.playlist-card .cover-img{
+  width:100% !important;
+  height:210px !important;
+  min-height:210px !important;
+  object-fit:cover !important;
+  display:block !important;
+}
+.playlist-card .card-disc{
+  display:none !important;
+}
+.playlist-cover-image{
+  width:100% !important;
+  height:100% !important;
+  min-height:220px !important;
+  object-fit:cover !important;
+  display:block !important;
+  border-radius:22px !important;
+}
+/* Two-card layout after removing saved music data */
+.insights .insight-grid{
+  grid-template-columns:repeat(2,minmax(260px,1fr)) !important;
+}
+@media(max-width:680px){
+  .insights .insight-grid{
+    grid-template-columns:1fr !important;
+  }
+}
+#lyricsBox{
+  display:block;
+  margin-top:20px;
+  padding:18px;
+  border-radius:18px;
+  background:rgba(255,255,255,0.06);
+  color:white;
+  line-height:1.8;
+  font-size:14px;
+  max-height:250px;
+  overflow-y:auto;
+  font-family:'Source Sans 3', sans-serif;
+  box-shadow:0 4px 20px rgba(0,0,0,0.2);
+  white-space: pre-line;
+}
+.lyrics-box {
+  display: none;
+}

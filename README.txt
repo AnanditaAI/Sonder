@@ -1,0 +1,1 @@
+Open login.html first. Album covers album1-album6 added and saved music data box removed.
